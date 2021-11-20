@@ -14,10 +14,14 @@ public class UserRegistrationMain {
         String firstName=userInput.nextLine();
         System.out.println("enter the last name");
         String lastName=userInput.nextLine();
+        System.out.println("enter the email id");
+        String eMailId=userInput.nextLine();
 
-        UserRegistration validate=new UserRegistration(firstName,lastName);
+
+        UserRegistration validate=new UserRegistration(firstName,lastName,eMailId);
 
         validate.validateFirstNameInput();
         validate.validateLastNameInput();
+        validate.validateEMailId();
     }
 }
