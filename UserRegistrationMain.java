@@ -16,12 +16,16 @@ public class UserRegistrationMain {
         String lastName=userInput.nextLine();
         System.out.println("enter the email id");
         String eMailId=userInput.nextLine();
+        System.out.println("enter the mobile no");
+        String mobileNo=userInput.nextLine();
 
 
-        UserRegistration validate=new UserRegistration(firstName,lastName,eMailId);
+
+        UserRegistration validate=new UserRegistration(firstName,lastName,eMailId, mobileNo);
 
         validate.validateFirstNameInput();
         validate.validateLastNameInput();
         validate.validateEMailId();
+        validate.validateMobileNo();
     }
 }

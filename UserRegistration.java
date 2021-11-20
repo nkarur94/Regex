@@ -6,18 +6,20 @@ public class UserRegistration {
     String firstName;
     String lastName;
     String eMailId;
+    String mobileNo;
 
     //constructor-parametrized
-    public UserRegistration(String firstName, String lastName, String eMailId) {
+    public UserRegistration(String firstName, String lastName, String eMailId, String mobileNo) {
         this.firstName = firstName;
         this.lastName=lastName;
         this.eMailId=eMailId;
-
+        this.mobileNo=mobileNo;
     }
 
     String firstNamePattern = "[A-Z][a-z]{2,}";
     String lastNamePattern="[A-Z][a-z]{2,}";//creating the pattern to match this rules
     String eMailIdPattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\\.[a-z]{2,6}$";
+    String mobileNoPattern="^[0-9]{1,2}+ [1-9][0-9]{9}$";
 
     //this method is used to validate firstname
     public void validateFirstNameInput() {
@@ -36,4 +38,8 @@ public class UserRegistration {
         System.out.println(eMailIdMatch);
     }
 
+    public void validateMobileNo(){
+        boolean mobileNoMatch=Pattern.matches(mobileNoPattern,mobileNo);
+        System.out.println(mobileNoMatch);
+    }
 }
