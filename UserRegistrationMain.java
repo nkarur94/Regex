@@ -18,14 +18,17 @@ public class UserRegistrationMain {
         String eMailId=userInput.nextLine();
         System.out.println("enter the mobile no");
         String mobileNo=userInput.nextLine();
+        System.out.println("enter the password");
+        String password=userInput.nextLine();
 
 
 
-        UserRegistration validate=new UserRegistration(firstName,lastName,eMailId, mobileNo);
+        UserRegistration validate=new UserRegistration(firstName,lastName,eMailId, mobileNo, password);
 
         validate.validateFirstNameInput();
         validate.validateLastNameInput();
         validate.validateEMailId();
         validate.validateMobileNo();
+        System.out.println(validate.validatePassword());
     }
 }
